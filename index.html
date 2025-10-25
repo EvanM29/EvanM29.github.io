@@ -1,359 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Evan Mahmood — Portfolio</title>
+    <link rel='stylesheet' href='./styles.css' />
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap' rel='stylesheet'>
   </head>
   <body>
-    <section id="about-me">
-      <nav>
-        <div class="personal_logo">Evan Mahmood</div>
-        <ul class="nav__link--list">
-          <li class="nav__link">
-            <a
-              href="#languages"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-            >
-              Languages</a
-            >
+    <!-- Floating minimal nav -->
+    <header class='nav'>
+      <a href='#about' class='logo'>Evan Mahmood</a>
+      <input id='menu-toggle' class='nav__checkbox' type='checkbox' aria-hidden='true' />
+      <label for='menu-toggle' class='nav__toggle' aria-label='Toggle navigation' aria-controls='mobile-menu' aria-expanded='false'>
+        <span></span><span></span><span></span>
+      </label>
+      <nav id='mobile-menu' class='nav__links'>
+        <a href='#projects' class='link'>Projects</a>
+        <a href='#certs' class='link'>Certifications</a>
+        <a href='#experience' class='link'>Experience</a>
+        <a href='mailto:ev.artby@gmail.com' class='btn btn--primary'>Contact</a>
+      </nav>
+    </header>
+
+    <!-- Cinematic hero -->
+    <section id='about' class='hero' aria-label='Intro'>
+      <div class='hero__bg' aria-hidden='true'>
+        <!-- Wallpaper parallax layer -->
+        <img class='hero__wallpaper' data-parallax alt='' src='assets/wallpaper.png' draggable='false' aria-hidden='true' />
+        <div class='hero__glow' aria-hidden='true'></div>
+        <div class='hero__grain' aria-hidden='true'></div>
+        <div class='hero__dust' aria-hidden='true'></div>
+      </div>
+
+      <div class='hero__content container'>
+        <h1 class='headline'>Technology, Design and Everything in Between</h1>
+        <p class='subhead'>Software Engineer focused on cybersecurity, modern web/app develoment, and immersive UX.</p>
+        <div class='hero__cta'>
+          <a href='#projects' class='btn btn--primary'>View Projects</a>
+          <a href='./assets/EvanMahmood_Resume.pdf' target='_blank' class='btn btn--glass'>Resume</a>
+        </div>
+        <div class='hero__metrics'>
+          <div class='metric'><span>2</span> years of professional & internship experience</div>
+          <div class='metric'><span>AI</span> expertise</div>
+          <div class='metric'><span>Cybersecurity</span> certified</div>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- Experience as glass panels -->
+    <section id='experience' class='section'>
+      <div class='container'>
+        <h2 class='section__title'>Experience</h2>
+        <ul class='cards'>
+          <li class='card'>
+            <div class='card__head'>
+              <h3 class='card__title'>Graduate Software Engineer</h3>
+              <span class='card__meta'>Qvalent, Westpac Bank · Jan 2025 — Present · Australia</span>
+            </div>
+            <ul class='card__list'>
+              <li>Spring Boot, PL/SQL and Vue for enterprise payment flows.</li>
+              <li>Testing and verification for mission‑critical systems.</li>
+              <li>Responsive UI improvements and accessibility focus.</li>
+              <li>Peer reviews, agile ceremonies, and secure practices.</li>
+            </ul>
           </li>
-          <li class="nav__link">
-            <a
-              href="#experience"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-            >
-              Experience</a
-            >
+          <li class='card'>
+            <div class='card__head'>
+              <h3 class='card__title'>Student Software Engineer</h3>
+              <span class='card__meta'>CCSW — UoN · Feb 2024 — Nov 2024 · Australia</span>
+            </div>
+            <ul class='card__list'>
+              <li>AI‑driven construction safety assistant using Llama 3.1 via LangChain.</li>
+              <li>React, Node.js, MySQL; designed modular, scalable architecture.</li>
+              <li>Voice input with Web Speech API; 58% faster reporting.</li>
+              <li>User testing, literature review, and fortnightly demos.</li>
+            </ul>
           </li>
-          <li class="nav__link">
-            <a
-              href="#projects"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-            >
-              Projects</a
-            >
+          <li class='card'>
+            <div class='card__head'>
+              <h3 class='card__title'>Front‑End Engineer Intern</h3>
+              <span class='card__meta'>Mudbath (Endava) · Feb 2024 · Australia</span>
+            </div>
+            <ul class='card__list'>
+              <li>Built a Next.js page for a headless CMS project.</li>
+              <li>Participated in design reviews and delivery planning.</li>
+            </ul>
           </li>
-          <li class="nav__link">
-            <a href="mailto:ev.artby@gmail.com" class="nav__link--anchor nav__link--anchor--primary">
-              Contact</a
-            >
+          <li class='card'>
+            <div class='card__head'>
+              <h3 class='card__title'>Software Engineering Intern</h3>
+              <span class='card__meta'>Pulse Mining Systems · Nov 2023 — Jan 2024 · Australia</span>
+            </div>
+            <ul class='card__list'>
+              <li>Peppol e‑invoicing access point; React, Node.js, MySQL.</li>
+              <li>Auth, history views, and transaction management UI.</li>
+            </ul>
           </li>
         </ul>
-      </nav>
-      <div class=" flex flex-1">
-        <div class="about-me__info row">
-          <div class="about-me__info--container">
-            <figure class="about-me__picture--mask">
-              <img src="./assets/MeNew.jpg" class="about-me__picture" alt="Picture of Evan Mahmood" />
-            </figure>
-            <h1 class="about-me__info--title">
-              Hey! I'm <span class="text--purple"> Evan Mahmood </span>&nbsp;<span class="wave">👋</span>
-            </h1>
-            <p class="about-me__info--para">
-                I'm a <strong class="text--purple"> Software Engineer </strong>  who is commited to learning and adapting to new technologies, delivering quality software solutions and creating a positive impact on the world.
-            </p>
-            <div class="about-me__links">
-                <a href="https://www.linkedin.com/in/evan-mahmood-286933169/" class="about-me__link">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/EvanM29" class="about-me__link">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:ev.artby@gmail.com" class="about-me__link">
-              <i class="far fa-envelope"></i>
-            </a>
-            <a href="./assets/EvanMahmood_Resume.pdf" target="_blank" class="about-me__link">
-              <i class="fas fa-file-pdf"></i>
-            </a>
-            </div>
-          </div>
-          <figure class="about-me__img--container">
-            <img src="./assets/undrawMain.svg" alt="" class="about-me__img">
-          </figure>
-        </div>
       </div>
     </section>
-    <section id="languages">
-      <div class="container">
-        <div class="row">
-          <h1 class="section__title">This is my <span class="text--purple">technology stack</span></h1>
-          <div class="language__list">
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="language__img" class="language__img">
-              </figure>
-              <span class="language__name">HTML</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="language__img" class="language__img">
-              </figure>
-              <span class="language__name">CSS</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="language__img" class="language__img">
-              </figure>
-              <span class="language__name">JavaScript</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="language__img" class="language__img">
-              </figure>
-              <span class="language__name">React</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img src="/assets/java.png" alt="language__img" class="language__img">
-              </figure>
-              <span class="language__name">Java</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img src="/assets/c++logo.png" alt="language__img" class="language__img">
-              </figure>
-              <span class="language__name">C++</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img src="/assets/sql.png" alt="language__img" class="language__img">
-              </figure>
-              <span class="language__name">SQL</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img src="/assets/maui.svg" alt="language__img" class="language__img">
-              </figure>
-              <span class="language__name">.NET MAUI</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img src="/assets/flutter.png" alt="language__img" class="language__img">
-              </figure>
-              <span class="language__name">Flutter</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img src="/assets/Vue.js_Logo_2.svg" alt="language__img" class="language__img">
-              </figure>
-              <span class="language__name">Vue.js</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img src="/assets/next-js.svg" alt="language__img" class="language__img">
-              </figure>
-              <span class="language__name">Next.js</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img src="/assets/mongodb.svg" alt="language__img" class="language__img">
-              </figure>
-              <span class="language__name">MongoDB</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img src="/assets/python.svg" alt="language__img" class="language__img">
-              </figure>
-              <span class="language__name">Python</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img src="/assets/nodejsnew.png" alt="language__img" class="language__img">
-              </figure>
-              <span class="language__name">Node.js</span>
-            </div>
-          </div>
-        </div>
+
+    <!-- Certifications gallery -->
+    <section id='certs' class='section'>
+      <div class='container'>
+        <h2 class='section__title'>Certifications</h2>
+        <ul class='badges'>
+          <!-- Drop more badge images in assets/ and add more <li> items as needed -->
+          <li class='badge'>
+            <a href='https://www.credly.com/badges/758b1cb5-8c6f-41ee-a4bf-eacd2bfc9232/print' target='_blank' rel='noopener noreferrer' aria-label='Verify Google Cybersecurity Certificate on Credly'>
+              <img src='assets/cert-google-cybersecurity.png' alt='Google Cybersecurity Certificate badge' />
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
-    <section id="experience">
-      <div class="container">
-        <div class="row">
-          <h1 class="section__title">My <span class="text--purple">Work Experience</span></h1>
-          <ul class="experience__list">
-            <li class="experience">
-              <div class="experience__header">
-                <h3 class="experience__role">Graduate Software Engineer</h3>
-                <span class="experience__company">Qvalent, Westpac Bank</span>
-                <span class="experience__date">Jan 2025 – Present</span>
+
+    <!-- Projects → keep screenshots; glass cards with hover -->
+    <section id='projects' class='section'>
+      <div class='container'>
+        <h2 class='section__title'>Featured Projects</h2>
+        <ul class='grid'>
+          <li class='tile tile--media-top'>
+            <figure class='tile__media'><img src='assets/spotify.png' alt='Spotify redesign screenshot'/></figure>
+            <div class='tile__body'>
+              <h3 class='tile__title'>Spotify Minimalistic Redesign</h3>
+              <p class='tile__tech'>Flutter (Dart)</p>
+              <p class='tile__desc'>Song page redesign with light/dark variants and simplified controls.</p>
+              <div class='tile__actions'>
+                <a class='link btn btn--glass' target='_blank' href='https://github.com/EvanM29/spotifyReDesign'><span class='btn__label'>GitHub</span></a>
               </div>
-              <p class="experience__location">Australia</p>
-              <ul class="experience__bullets">
-                <li>Developed software using Spring Boot (Java), PL/SQL and Vue.js, to validate request and response data flows in an enterprise payment system. Currently participating in software development in both customer-facing and internal applications.  </li>
-                <li>Conducted software testing and verification of mission-critical applications, working within a team to ensure system reliability, data accuracy, and compliance with card scheme protocols. </li>
-                <li>Enhance customer experience by optimising website responsiveness and mobile compatibility, implementing design improvements and UI refinements. </li>
-                <li>Collaborated in software development teams, actively participating in daily stand-ups, planning, retrospectives, and reviews, contributing to continuous delivery of secure and scalable software products. </li>
-                <li>Performed code reviews of peer contributions to maintain code quality, enforce coding standards in alignment with Westpac’s internal security and compliance policies. </li>
-                <li>Engaged in continuous learning and improvement, incorporating feedback from senior engineers and retrospectives to refine development techniques and team collaboration.  </li>
-              </ul>
-            </li>
-            <li class="experience">
-              <div class="experience__header">
-                <h3 class="experience__role">Student Software Engineer</h3>
-                <span class="experience__company">CCSW - UoN</span>
-                <span class="experience__date">Feb 2024 – Nov 2024</span>
+            </div>
+          </li>
+           <li class='tile tile--media-bottom'>
+            <figure class='tile__media'><img src='assets/library.JPG' alt='E‑Commerce Library screenshot'/></figure>
+            <div class='tile__body'>
+              <h3 class='tile__title'>E‑Commerce Library</h3>
+              <p class='tile__tech'>HTML · CSS · JavaScript</p>
+              <p class='tile__desc'>Storefront experience with featured/latest filtering and smooth interactions.</p>
+              <div class='tile__actions'>
+                <a class='link btn btn--glass' target='_blank' href='https://github.com/EvanM29/mini-project-1'><span class='btn__label'>GitHub</span></a>
               </div>
-              <p class="experience__location">Australia</p>
-              <ul class="experience__bullets">
-                <li>Student Work Placement position as a part of my Final Year Project which included defining project requirements, creating models, system design and developing an Artificial Intelligence-driven solution to address hazard identification and control measures in the construction Industry.</li>
-                <li>Developed a comprehensive web application using React.js, Node.js, and MySQL. The system leverages cutting-edge AI technology, specifically the Llama 3.1 large language model via LangChain, to automate the generation of hazard control measures.</li>
-                <li>Integrated the LangChain framework to ensure LLM-agnostic flexibility, allowing easy adaptation to new AI models or extensions, such as Retrieval Augmented Generation (RAG) in future iterations.</li>
-                <li>Implemented voice-to-text technology (Web Speech API) for hazard description input, streamlining the user experience.</li>
-                <li>Optimised hazard reporting efficiency, reducing input time by 58% through user-tested voice-to-text functionality.</li>
-                <li>Actively involved in system testing and user feedback collection to ensure the tool’s practical application in real-world construction safety environments.</li>
-                <li>Designed and maintained a scalable and modular system architecture, ensuring future extensibility and integration with additional AI tools or updated LLM models.</li>
-                <li>Actively participating in fortnightly meetings with project supervisors, which include discussions of the project, deliverables, research, and areas for improvement.</li>
-                <li>Successfully conducted and completed an approved Literature Review of relevant technologies.</li>
-              </ul>
-            </li>
-            <li class="experience">
-              <div class="experience__header">
-                <h3 class="experience__role">Front-End Engineer Intern</h3>
-                <span class="experience__company">Mudbath (Endava)</span>
-                <span class="experience__date">Feb 2024</span>
+            </div>
+          </li>
+          <li class='tile tile--media-top'>
+            <figure class='tile__media'><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 533'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%232a1f1a'/><stop offset='1' stop-color='%231b1512'/></linearGradient></defs><rect width='100%' height='100%' fill='url(%23g)'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-size='220'>🚧</text></svg>" alt='Under construction emoji graphic'/></figure>
+            <div class='tile__body'>
+              <h3 class='tile__title'>In The Works</h3>
+              <p class='tile__tech'>New projects brewing</p>
+              <p class='tile__desc'>I'm currently building more projects that will be added here soon. Details of all completed projects can be found in my resume.</p>
+              <div class='tile__actions'>
+                <a class='link btn btn--glass' target='_blank' href='./assets/EvanMahmood_Resume.pdf'><span class='btn__label'>Resume</span></a>
               </div>
-              <p class="experience__location">Australia</p>
-              <ul class="experience__bullets">
-                <li>Developed a webpage using Next.js as part of a Headless CMS project, showcasing a strong interest and hands-on experience in front-end development. </li>
-                <li>Observed and actively participated in project discussions and decision-making processes led by the senior tech lead.</li>
-              </ul>
-            </li>
-            <li class="experience">
-              <div class="experience__header">
-                <h3 class="experience__role">Software Engineering Intern</h3>
-                <span class="experience__company"> Pulse Mining Systems</span>
-                <span class="experience__date">Nov 2023 – Jan 2024</span>
-              </div>
-              <p class="experience__location">Australia</p>
-              <ul class="experience__bullets">
-                <li>Supported company in transitioning to Peppol Invoicing and establishing as a Peppol Access Point. </li>
-                <li>Spearheaded the design and development of the full-stack Peppol Access Point web application utilising React.js, Node.js, and MySQL. The application encompassed user authentication and allowed users to efficiently manage past Peppol e-invoicing transactions. </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
-    <section id="projects">
-      <div class="container">
-        <div class="row">
-          <h1 class="section__title"> Here are some of my <span class="text--purple">Personal Projects</span></h1>
-          <ul class="project__list">
-            <li class="project">
-              <div class="project__wrapper">
-                <img src="/assets/library.JPG" class="project__img" alt="">
-                <div class="project__description">
-                  <h3 class="project__description--title">E-Commerce Library</h3>
-                  <h4 class="project__description--sub-title">
-                    HTML, CSS, JavaScript
-                  </h4>
-                  <p class="project__description--para">
-                    An E-Commerce website to sell books! Currently includes a library of books and books divided into a Featured and Latest section. Made using HTML, CSS and JavaScript
-                  </p>
-                  <div class="project__description--links">
-                    <a href="https://github.com/EvanM29/mini-project-1" target="_blank" class="project__description--link">
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="project">
-              <div class="project__wrapper">
-                <img src="/assets/spotify.png" class="project__img" alt="">
-                <div class="project__description">
-                  <h3 class="project__description--title">Spotify Minimalistic Redesign</h3>
-                  <h4 class="project__description--sub-title">
-                    Flutter (Dart)
-                  </h4>
-                  <p class="project__description--para">
-                    Redesigned the Spotify song play page to have a minimalistic, modern look. Includes both light and dark mode. Made using Flutter.
-                  </p>
-                  <div class="project__description--links">
-                    <a href="https://github.com/EvanM29/spotifyReDesign" target="_blank" class="project__description--link">
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="project">
-              <div class="project__wrapper">
-                <img src="/assets/snake.JPG" class="project__img" alt="">
-                <div class="project__description">
-                  <h3 class="project__description--title">Classic Snake Game</h3>
-                  <h4 class="project__description--sub-title">
-                    HTML, CSS, JavaScript
-                  </h4>
-                  <p class="project__description--para">
-                    Classic Snake Game made using JavaScript. The game is fully functional and considers Game Over constraints.
-                  </p>
-                  <div class="project__description--links">
-                    <a href="https://github.com/EvanM29/SnakeGame" target="_blank" class="project__description--link">
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="project">
-              <div class="project__wrapper">
-                <img src="/assets/pokemon.JPG" class="project__img" alt="">
-                <div class="project__description">
-                  <h3 class="project__description--title">Pokemon Card Opener</h3>
-                  <h4 class="project__description--sub-title">
-                    HTML, CSS, JavaScript
-                  </h4>
-                  <p class="project__description--para">
-                   Open a Pokemon Card Pack containing your favourite (random) generation one Pokemon Cards! The last card of each pack is a special shiny card, just like the real ones!
-                  </p>
-                  <div class="project__description--links">
-                    <a href="https://github.com/EvanM29/Pokemon-Card" target="_blank" class="project__description--link">
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
+
+    <footer class='footer'>
+      <div class='container footer__bar'>
+        <span>© <span id='year'></span> Evan Mahmood</span>
+        <div class='footer__links'>
+          <a class='link' target='_blank' href='https://github.com/EvanM29'>GitHub</a>
+          <a class='link' target='_blank' href='https://www.linkedin.com/in/evan-mahmood-286933169/'>LinkedIn</a>
+          <a class='link' href='mailto:ev.artby@gmail.com'>Email</a>
         </div>
-      </div>
-    </section>
-    <footer>
-      <div class="row footer__row">
-        <a href="#" class="footer__anchor">
-          <figure class="footer__logo">
-            <img src="./assets/MeNew.jpg" class="footer__logo--img" alt="Picture of Evan Mahmood" />
-          </figure>
-          <span class="footer__logo--popper">
-            Top
-            <i class="fas fa-arrow-up"></i>
-          </span>
-        </a>
-        <div class="footer__social--list">
-          <a href="https://github.com/EvanM29" class="
-          footer__social--link
-          link__hover-effect
-          link__hover-effect--white" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/evan-mahmood-286933169/" class="
-          footer__social--link
-          link__hover-effect
-          link__hover-effect--white" target="_blank">LinkedIn</a>
-          <a href="mailto:ev.artby@gmail.com" class="
-          footer__social--link
-          link__hover-effect
-          link__hover-effect--white" target="_blank">Email</a>
-          <a href="./assets/EvanMahmood_Resume.pdf" class="
-          footer__social--link
-          link__hover-effect
-          link__hover-effect--white" target="_blank">Resume</a>
-        </div>
-        <div class="footer__copyright"> Copyright © 2025</div>
       </div>
     </footer>
+
+    <script>
+      // Parallax and scroll polish
+      const parallaxEl = document.querySelector('[data-parallax]');
+      const year = document.getElementById('year');
+      if (year) year.textContent = new Date().getFullYear();
+
+      const onScroll = () => {
+        const y = window.scrollY || window.pageYOffset;
+        if (parallaxEl) parallaxEl.style.transform = `translate3d(0, ${y * 0.2}px, 0)`;
+      };
+      document.addEventListener('scroll', onScroll, { passive: true });
+      // Disable context menu over hero to discourage saving wallpaper
+      const heroBg = document.querySelector('.hero__bg');
+      if (heroBg) heroBg.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    </script>
   </body>
-</html>
+  </html>
