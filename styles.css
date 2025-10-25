@@ -144,7 +144,7 @@
   .subhead{ text-align:center; color: #ffffff; margin: 14px auto 28px; max-width: 780px; }
   .hero__cta{ display:flex; gap:14px; justify-content:center; }
   .hero__metrics{ display:flex; gap:16px; justify-content:center; margin-top: 32px; flex-wrap: wrap; }
-  .metric{ background: var(--glass); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); box-shadow: var(--shadow); color:#eaddd3;}
+  .metric{ background: var(--glass); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); box-shadow: var(--shadow); color:#eaddd3; text-align: center; }
   .metric span{ color:#ffd1a0; font-weight:700; }
 
   .section{ position: relative; z-index: 0; padding: 48px 0; background: transparent; }
@@ -353,7 +353,8 @@
     }
     .nav__links{ gap: 12px; }
     .nav__links .btn{ width: 100%; justify-content:center; }
-    .hero__content{ padding-top: 120px; }
+    /* Pull hero content higher on mobile for better wallpaper visibility */
+    .hero__content{ padding-top: 78px; }
     .footer__bar{ flex-direction: column; }
   }
 }
